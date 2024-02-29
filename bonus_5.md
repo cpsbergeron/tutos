@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il affiche une direction en fonction de l'inclinaison du.
+Programme le micro:bit pour qu'il affiche une direction en fonction de l'inclinaison du micro:bit.
 
 ## Étape 1
 
