@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Transforme le micro:bit en jeu de Roche, papier, ciseaux... allumettes!
+Transforme le micro:bit en jeu de Roche, papier, ciseaux... allumette!
 
 ## Étape 1
 
