@@ -20,7 +20,11 @@
         "bonus_2.md",
         "bonus_3.md",
         "bonus_4.md",
-        "bonus_5.md"
+        "bonus_5.md",
+        "bonus_6.md",
+        "bonus_7.md",
+        "bonus_8.md",
+        "bonus_9.md"
     ],
     "testFiles": [
         "test.ts"
