@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Affiche la luminosité ambiante de la pièce sur le micro:bit à l'aide d'un graphique.
+Affiche le niveau d'intensité lumineuse à l'aide d'un graphique.
 
 ## Étape 1
 

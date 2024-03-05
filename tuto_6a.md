@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Affiche la température ambiante sur le micro:bit à l'aide d'un graphique.
+Affiche la température à l'aide d'un graphique.
 
 ## Étape 1
 
