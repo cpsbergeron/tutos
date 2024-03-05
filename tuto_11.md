@@ -1,302 +1,165 @@
+
 # Tutoriel 11
 
 ## @showdialog
 
-Transforme le micro:bit en serrure numérique.
+Crée un décompte musical!
 
 ## Étape 1
 
-Supprime le bloc ``||basic:toujours||``.
+Supprime les blocs ``||basic:toujours||`` et ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:motdepasse||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Temps||``.
 
-Ajoute le bloc ``||variables: définir motdepasse ||`` dans le bloc ``||basic: au démarrage||``.
+Ajoute le bloc ``||variables: définir Temps à "4"||`` dans le bloc ``||input: lorsque le bout A est pressé||``.
 
 ```blocks
 
-let motdepasse = 0
+let Temps = 0
+input.onButtonPressed(Button.A, function () {
+    Temps = 4
+})
 
 ```
 
 ## Étape 3
 
-Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir motdepasse||`` par le bloc ``||text:"   "||``.
-
-Regarde dans l'onglet ``||text:Texte||``.
-
+Ajoute le bloc ``||loops: répéter 3 fois||`` sous le bloc ``||variables: définir Nombre à "4"||``.
 
 ```blocks
 
-let motdepasse = ""
+let Temps = 0
+input.onButtonPressed(Button.A, function () {
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        
+    }
+})
 
 ```
 
 ## Étape 4
 
-Crée un mot de passe dans le bloc ``||text:"   "||``. 
-
-Voici le mot de passe ``||variables:ABBAB||``
+Ajoute le bloc ``||music: jouer ton Middle C pendant 1/4 temps||`` dans le bloc ``||loops: répéter 3 fois||``.
 
 ```blocks
 
-let motdepasse = "ABBAB"
+let Temps = 0
+input.onButtonPressed(Button.A, function () {
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+    }
+})
 
 ```
 
 ## Étape 5
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:mdp||``.
+Ajoute le bloc ``||basic: montrer nombre||`` sous le bloc ``||music: jouer ton Middle C pendant 1/4 temps||``.
 
-Ajoute le bloc ``||variables: définir mdp ||`` sous le bloc ``||variables:définir motdepasse||``.
+Ajoute le bloc ``||basic: pause (ms) 100||`` sous le bloc ``||basic: montrer nombre||``.
 
 ```blocks
 
-let motdepasse = "ABBAB"
-let mdp = 0
+let Temps = 0
+input.onButtonPressed(Button.A, function () {
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+        basic.showNumber(0)
+        basic.pause(100)
+    }
+})
 
 ```
 
 ## Étape 6
 
-Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:"   "||``.
+Ajoute le bloc ``||math: 0 - 0||`` dans le bloc ``||basic: montrer nombre||``.
 
-Regarde dans l'onglet ``||text:Texte||``.
+Remplace la valeur ``||math: 0 ||`` de gauche par le bloc ``||variables:Temps||``.
 
-```blocks
-
-let motdepasse = "ABBAB"
-let mdp = ""
-
-```
-
-
-## Étape 7
-
-Ajoute le bloc ``||variables:définir mdp||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Remplace la valeur ``||math: 0 ||`` de droite par la valeur ``||math: 1 ||``. 
 
 ```blocks
 
-let mdp = 0
+let Temps = 0
 input.onButtonPressed(Button.A, function () {
-    mdp = 0
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+        basic.showNumber(Temps - 1)
+        basic.pause(100)
+    }
 })
 
 ```
 
-## Étape 9
+## Étape 7
 
-Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:concaténation||``.
+Ajoute le bloc ``||variables: modifier Temps 1||`` sous le bloc ``||basic: pause (ms) 100)||``.
+
+Remplace la valeur ``||variables: 1||`` par ``||variables: -1||`` dans le bloc ``||variables: modifier Temps de 1||``.
 
 ```blocks
 
-let mdp = ""
+let Temps = 4
+for (let index = 0; index < 3; index++) {
+    music.playTone(262, music.beat(BeatFraction.Quarter))
+    basic.showNumber(Temps - 1)
+    basic.pause(100)
+    Temps += -1
+}
+
+```
+
+## Étape 8
+
+Ajoute le bloc ``||music: jouer ton Middle G pendant 1 temps||`` sous le bloc ``||loops: répéter 3 fois||``.
+
+```blocks
+
+let Temps = 0
 input.onButtonPressed(Button.A, function () {
-    mdp = "Bonjour" + "Monde"
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+        basic.showNumber(Temps - 1)
+        basic.pause(100)
+        Temps += 1
+    }
+    music.playTone(392, music.beat(BeatFraction.Whole))
+})
+
+```
+## Étape 9
+
+Ajoute le bloc ``||basic:afficher texte "Hello!"||`` sous le bloc ``||music: jouer ton Middle G pendant 1 temps||``.
+
+Remplace le texte ``||basic: Hello! ||`` par ``||basic: Go! ||``.
+
+```blocks
+
+let Temps = 0
+input.onButtonPressed(Button.A, function () {
+    Temps = 4
+    for (let index = 0; index < 3; index++) {
+        music.playTone(262, music.beat(BeatFraction.Quarter))
+        basic.showNumber(Temps - 1)
+        basic.pause(100)
+        Temps += 1
+    }
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    basic.showString("Go!")
 })
 
 ```
 
 ## Étape 10
 
-Modifie les valeurs du bloc ``||text:concaténation||``.
+Télécharge et teste le programme.
 
-Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
-
-Remplace la valeur ``||text:Monde||`` par la lettre ``||text:A||``.
-
-```blocks
-
-let mdp = ""
-input.onButtonPressed(Button.A, function () {
-    mdp = "" + mdp + "A"
-})
-
-```
-
-
-## Étape 11
-
-Ajoute le bloc ``||variables:définir mdp||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
-
-
-```blocks
-
-let mdp = 0
-input.onButtonPressed(Button.B, function () {
-    mdp = 0
-})
-
-```
-
-## Étape 12
-
-Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:concaténation||``.
-
-```blocks
-
-let mdp = ""
-input.onButtonPressed(Button.B, function () {
-    mdp = "Bonjour" + "Monde"
-})
-
-```
-
-## Étape 13
-
-Modifie les valeurs du bloc ``||text:concaténation||``.
-
-Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
-
-Remplace la valeur ``||text:Monde||`` par la lettre ``||text:B||``.
-
-```blocks
-
-let mdp = ""
-input.onButtonPressed(Button.B, function () {
-    mdp = "" + mdp + "B"
-})
-
-```
-
-## Étape 14
-
-Ajoute le bloc ``||logic:si vrai alors sinon||`` dans le bloc ``||input:lorsque le bouton A+B est pressé||``.
-
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    if (true) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 15
-
-Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:"   " = "   "||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    if ("" == "") {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 16
-
-Modifie les valeurs du bloc ``||logic:"   " = "   "||``.
-
-Remplace la valeur de gauche par le bloc ``||variables:motdepasse||``.
-
-Remplace la valeur de droite par le bloc ``||variables:mdp||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 17
-
-Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:si||``.
-
-Sélectionne l'icone en forme de crochet. Regarde l'indice au besoin.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 20
-
-Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:sinon||``.
-
-Sélectionne l'icone en forme de X. Regarde l'indice au besoin.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-    } else {
-        basic.showIcon(IconNames.No)
-    }
-})
-
-```
-
-## Étape 21
-
-Ajoute le bloc ``||basic:pause (ms) 100||`` sous le bloc ``||logic:si alors sinon||``.
-
-Modifie la valeur ``||basic:100||`` du bloc ``||basic:pause||`` par la valeur ``||basic:500||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-            } else {
-        basic.showIcon(IconNames.No)
-    }
-    basic.pause(500)
-})
-
-
-```
-
-## Étape 22
-
-Ajoute le bloc ``||basic:effacer l'écran||`` sous le bloc ``||basic:pause (ms) 500||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-            } else {
-        basic.showIcon(IconNames.No)
-    }
-    basic.pause(500)
-    basic.clearScreen()
-})
-
-```
-
-## @showdialog
-
-Télécharge et teste la programmation.
+Relis tes écouteurs au micro:bit avec des pinces crocodiles.
