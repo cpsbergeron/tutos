@@ -88,3 +88,9 @@ input.onGesture(Gesture.Shake, function () {
 ## Étape 7
 
 Télécharge et teste la programmation.
+
+## Étape 8
+
+Pourquoi rien ne s'affiche sur le micro:bit ?
+
+Quelle action dois-tu réaliser ?

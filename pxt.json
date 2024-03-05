@@ -24,7 +24,12 @@
         "bonus_6.md",
         "bonus_7.md",
         "bonus_8.md",
-        "bonus_9.md"
+        "bonus_9.md",
+        "tuto_6.md",
+        "tuto_7.md",
+        "tuto_8.md",
+        "tuto_9.md",
+        "tuto_10.md"
     ],
     "testFiles": [
         "test.ts"

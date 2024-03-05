@@ -78,3 +78,9 @@ input.onButtonPressed(Button.AB, function () {
 ## Étape 5
 
 Télécharge et teste la programmation.
+
+## Étape 6
+
+Pourquoi rien ne s'affiche sur le micro:bit ?
+
+Quelle action dois-tu réaliser ?
