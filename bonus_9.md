@@ -72,6 +72,6 @@ Télécharge le programme dans le micro:bit.
 
 Cache le micro:bit dans la classe.
 
-Les élèves devront le trouver à l'aide du récepteur! 
+Les élèves devront le trouver à l'aide du récepteur.
 
-Bonne chance.
+Bonne chance !

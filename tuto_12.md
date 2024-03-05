@@ -1,5 +1,3 @@
-# Niveau 3
-
 # Tutoriel 12
 
 ## @showdialog
