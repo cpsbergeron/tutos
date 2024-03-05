@@ -219,6 +219,8 @@ input.onButtonPressed(Button.AB, function () {
 
 Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:si||``.
 
+Sélectionne l'icone en forme de crochet. Regarde l'indice au besoin.
+
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
@@ -236,6 +238,8 @@ input.onButtonPressed(Button.AB, function () {
 ## Étape 20
 
 Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:sinon||``.
+
+Sélectionne l'icone en forme de X. Regarde l'indice au besoin.
 
 ```blocks
 
