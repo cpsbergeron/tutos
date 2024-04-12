@@ -178,9 +178,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
-## showdialog 
+## @showdialog 
 
-Les étapes pour les numéros 3, 4, 5 et 6 ont disparu.
+Les étapes pour les numéros 3, 4, 5 et 6 du dé ont disparu.
 
 Dupplique le bloc ``||logic: si alors||`` et apporte les modifications nécessaires.
 
@@ -251,5 +251,3 @@ input.onGesture(Gesture.Shake, function () {
 
 
 ```
-
-
