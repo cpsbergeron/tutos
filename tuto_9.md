@@ -94,9 +94,27 @@ Ajoute le bloc ``||basic: montrer LEDs||`` sous le bloc ``||logic: si Nombre = 1
 
 Dessine le chiffre 1.
 
-Ajoute le bloc ``||basic: pause (ms) 100||`` sous le bloc ``||basic: montrer LEDs||``.
+```blocks
 
-Modifie la valeur ``||basic: pause (ms) 100||`` par ``||basic: pause (ms) 2000||``.
+let Nombre = 0
+input.onGesture(Gesture.Shake, function () {
+    Nombre = randint(1, 6)
+    if (Nombre == 1) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+    }
+})
+
+```
+
+## Étape 8
+
+Dupplique le bloc ``||logic: si alors||`` et glisse-le sous le bloc ``||logic: si alors||``.
 
 ```blocks
 
@@ -111,29 +129,62 @@ input.onGesture(Gesture.Shake, function () {
             . . # . .
             . # # # .
             `)
-        basic.pause(2000)
+    }
+    if (Nombre == 1) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
     }
 })
 
 ```
 
-## @showdialog
+## Étape 9
 
-Oups! Les étapes pour programmer les nombres 2 à 6 ont disparu.
+Modifie les valeurs du deuxième bloc ``||logic: si alors||``.
 
-Programme le micro:bit pour qu'il puisse afficher les autres nombres du dé.
+Remplace la valeur ``||logic: 1||`` par ``||logic: 2||``.
 
-Duplique le bloc de programmation ``||logic: si alors||`` à l'aide du clique droit.
+Remplace le dessin du numéro ``||basic: 1||`` par le dessin du numéro ``||basic: 2||``.
 
-Modifie les valeurs.
+```blocks
 
-## Étape 8
+let Nombre = 0
+input.onGesture(Gesture.Shake, function () {
+    Nombre = randint(1, 6)
+    if (Nombre == 1) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+    }
+    if (Nombre == 2) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . # # # .
+            . # . . .
+            . # # # .
+            `)
+    }
+})
 
-Télécharge et teste la programmation.
+```
 
-Secoue le micro:bit. Que remarques-tu ?
+## showdialog 
 
-## Étape 8
+Les étapes pour les numéros 3, 4, 5 et 6 ont disparu.
+
+Dupplique le bloc ``||logic: si alors||`` et apporte les modifications nécessaires.
+
+## Étape 10
 
 Voici la programmation complète.
 
@@ -150,8 +201,7 @@ input.onGesture(Gesture.Shake, function () {
             . . # . .
             . # # # .
             `)
-        basic.pause(2000)
-    }
+          }
     if (Nombre == 2) {
         basic.showLeds(`
             . # # # .
@@ -160,8 +210,7 @@ input.onGesture(Gesture.Shake, function () {
             . # . . .
             . # # # .
             `)
-        basic.pause(2000)
-    }
+           }
     if (Nombre == 3) {
         basic.showLeds(`
             . # # # .
@@ -170,8 +219,7 @@ input.onGesture(Gesture.Shake, function () {
             . . . # .
             . # # # .
             `)
-        basic.pause(2000)
-    }
+            }
     if (Nombre == 4) {
         basic.showLeds(`
             . # . # .
@@ -180,8 +228,7 @@ input.onGesture(Gesture.Shake, function () {
             . . . # .
             . . . # .
             `)
-        basic.pause(2000)
-    }
+            }
     if (Nombre == 5) {
         basic.showLeds(`
             . # # # .
@@ -190,8 +237,7 @@ input.onGesture(Gesture.Shake, function () {
             . . . # .
             . # # # .
             `)
-        basic.pause(2000)
-    }
+            }
     if (Nombre == 6) {
         basic.showLeds(`
             . # # # .
@@ -200,8 +246,7 @@ input.onGesture(Gesture.Shake, function () {
             . # . # .
             . # # # .
             `)
-        basic.pause(2000)
-    }
+            }
 })
 
 
