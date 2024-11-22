@@ -67,7 +67,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
-Modifie la valeur ``|| basic: 100 ||`` par ``|| basic: pause (ms) 1000 ||``.
+Modifie la valeur ``|| basic: 100 ||`` par ``|| basic: 1000 ||``.
 
 ```blocks
 
