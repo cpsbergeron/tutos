@@ -37,7 +37,8 @@
         "tuto_15.md",
         "tuto_12.md",
         "tuto_13.md",
-        "tuto_066_1.md"
+        "tuto_066_1.md",
+        "tuto_066_2.md"
     ],
     "testFiles": [
         "test.ts"
