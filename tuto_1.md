@@ -30,7 +30,7 @@ Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
 ```blocks
 
 basic.forever(function () {
-    basic.showString("Hello!")
+    basic.showString("Hello!")  // Remplacer "Hello!" par ton prénom
 })
 
 ```
