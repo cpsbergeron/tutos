@@ -4,6 +4,7 @@
 
 Programme le micro:bit pour qu'il affiche ton prénom.
 
+
 ## Étape 1
 
 Supprime le bloc ``||basic:au démarrage||``.
@@ -11,7 +12,6 @@ Supprime le bloc ``||basic:au démarrage||``.
 ## Étape 2
 
 Ajoute le bloc ``|| basic: afficher texte ||`` dans le bloc ``||basic: toujours||``.
-
 
 ```blocks
 
@@ -25,12 +25,12 @@ basic.forever(function () {
 
 Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
 
-Écris ton prénom dans le bloc ``|| basic: afficher texte ||`` (ex. : Seb).
+Écris ton prénom dans le bloc ``|| basic: afficher texte ||`` (ex. : Seb). ** sans accent **
 
 ```blocks
 
 basic.forever(function () {
-    basic.showString("Hello!") 
+    basic.showString("Seb") 
 })
 
 ```
