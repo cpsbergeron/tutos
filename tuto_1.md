@@ -2,16 +2,25 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il affiche ton prénom.
+🎯 Objectif 🎯
 
+Fais défiler ton prénom sur l'écran LED du micro:bit ! 
+
+C'est ton tout premier pas dans le monde du code. 
+
+Prêt ? C'est parti ! 🚀 🚀
 
 ## Étape 1
 
-Supprime le bloc ``||basic:au démarrage||``.
+🧩 Étape 1 : On fait le ménage
+
+➡️ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Ajoute le bloc ``|| basic: afficher texte ||`` dans le bloc ``||basic: toujours||``.
+✨ Étape 2 : Ajoute un bloc !
+
+➡️ Ajoute le bloc ``|| basic: afficher texte ||`` dans le bloc ``||basic: toujours||``.
 
 ```blocks
 
@@ -23,9 +32,11 @@ basic.forever(function () {
 
 ## Étape 3
 
-Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
+✏️ Étape 3 : Modifie les valeurs !
 
-Écris ton prénom dans le bloc ``|| basic: afficher texte ||`` (ex. : Seb). ** sans accent **
+➡️ Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
+
+➡️ Écris ton prénom dans le bloc ``|| basic: afficher texte ||`` (ex. : Seb). 
 
 ```blocks
 
@@ -34,6 +45,27 @@ basic.forever(function () {
 })
 
 ```
+
+## @showdialog
+
+🚨🚨 Attention ! 🚨🚨
+
+Certains caractères spéciaux ne sont pas acceptés.
+
+Lesquels ?
+
 ## Étape 4
 
-Télécharge et teste la programmation.
+💾 Étape #4 Télécharge et teste la programmation.
+
+➡️ Télécharge ton programme sur le micro:bit.
+
+➡️ Regarde ton prénom défiler fièrement sur l'écran. 
+
+## Étape 5
+
+🧠 Étape #5 Défi supplémentaire.
+
+➡️ Fais défiler également ton nom de famille.
+
+Prêt ? C'est parti ! 🚀 🚀
