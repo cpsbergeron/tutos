@@ -8,7 +8,7 @@ Fais défiler ton prénom sur l'écran LED du micro:bit !
 
 C'est ton tout premier pas dans le monde du code. 
 
-Prêt ? C'est parti ! 🚀 🚀
+Prêt ? C'est parti ! 🚀 🚀 🚀
 
 ## Étape 1
 
