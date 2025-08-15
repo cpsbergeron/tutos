@@ -54,17 +54,36 @@ Certains caractères spéciaux ne sont pas acceptés.
 
 Lesquels ?
 
+
 ## Étape 4
 
-💾 Étape #4 Télécharge et teste la programmation.
+✏️ Étape 4 : Modifie les valeurs !
+
+➡️ Écris ton prénom avec des caractères spéciaux. 
+
+➡️ Observe ton prénom défiler dans le simulateur. 
+
+```blocks
+
+basic.forever(function () {
+    basic.showString("Seb") 
+})
+
+```
+
+## Étape 5
+
+💾 Étape #5 Télécharge et teste la programmation.
+
+➡️ Écris correctement ton prénom sans caractères spéciaux.
 
 ➡️ Télécharge ton programme sur le micro:bit.
 
 ➡️ Regarde ton prénom défiler fièrement sur l'écran. 
 
-## Étape 5
+## Étape 6
 
-🧠 Étape #5 Défi supplémentaire.
+🧠 Étape #5 **Défi supplémentaire**.
 
 ➡️ Fais défiler également ton nom de famille.
 
